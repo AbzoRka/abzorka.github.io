@@ -221,3 +221,27 @@ footer {
     color: #64748b;
     border-top: 2px dashed #334155; /* Пунктирная линия */
 }
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+/* плавное появление */
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: slideDown 0.8s ease-out forwards;
+}

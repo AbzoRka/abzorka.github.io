@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Офицальные</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Официальные Сайты и Ресурсы</title>
+  <link rel="stylesheet" href="styleSite.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+
+  <main>
+  <!-- Верхняя таблица с навигацией и настройками -->
+  <div class="top-nav-container">
+    <table class="nav-table">
+      <tr>
+        <td style="width: 25%;" class="animate-cascade delay-1">
+          <a href="index.html">⬅️ На главную</a>
+        </td>
+        <td style="width: 25%;" class="animate-cascade delay-1">
+          <label style="color: #94a3b8; font-size: 0.8rem; display: block;">Категория сайтов:</label>
+          <select id="categoryFilter" onchange="filterSites()">
+            <option value="all">Все ресурсы</option>
+            <option value="gamedev">GameDev & Движки</option>
+            <option value="web">Веб-разработка</option>
+            <option value="graphics">3D & Графика</option>
+            <option value="game">Игры</option>
+            <option value="bench">Bemcmark & Тесты</option>
+          </select>
+        </td>
+        <td style="width: 25%;" class="animate-cascade delay-1">
+          <label style="color: #94a3b8; font-size: 0.8rem; display: block;">Сортировка:</label>
+          <select id="sortSites" onchange="sortSites()">
+            <option value="default">Без сортировки</option>
+            <option value="popular">По популярности</option>
+            <option value="name">По алфавиту</option>
+          </select>
+        </td>
+        <td style="width: 25%;" class="animate-cascade delay-1">
+          <label style="color: #94a3b8; font-size: 0.8rem; display: block;">Поиск:</label>
+          <input type="text" id="searchInput" placeholder="Поиск сайта..." onkeyup="searchSites()">
+        </td>
+      </tr>
+    </table>
+  </div>
+</main>
+
+  <!-- Основной контент со списком сайтов -->
+  <div class="main-container">
     
+    <div class="section-header animate-cascade delay-2">
+      <h1>🌐 Официальные Сайты и Документация</h1>
+      <p>Быстрый доступ к проверенным внешним ресурсам, движкам и документации.</p>
+    </div>
+
+    <!-- Карточки сайтов в ряд -->
+    <div class="sites-grid" id="sitesContainer">
+
+      <!-- Карточка 1 -->
+      <div class="site-card animate-cascade delay-3" data-category="gamedev" data-name="Roblox Developer Hub" data-popular="82">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Roblox Dev" class="site-preview">
+        <div class="site-body">
+          <div class="site-title">🎮 Roblox Developer Hub</div>
+          <div class="site-desc">Официальная документация по Luau, API классов, физике и работе в Roblox Studio.</div>
+          <div class="site-meta">
+            <span class="site-tag">Roblox API</span>
+            <a href="https://create.roblox.com/docs" target="_blank" class="btn-visit">Открыть ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="site-card animate-cascade delay-4" data-category="graphics" data-name="Blender Official" data-popular="88">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Blender" class="site-preview">
+        <div class="site-body">
+          <div class="site-title">🎨 Blender Documentation</div>
+          <div class="site-desc">Справочник по 3D-моделированию, текстурированию, шейдерам и рендерингу.</div>
+          <div class="site-meta">
+            <span class="site-tag">3D & Render</span>
+            <a href="https://docs.blender.org" target="_blank" class="btn-visit">Открыть ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="site-card animate-cascade delay-5" data-category="gamedev" data-name="Godot Engine" data-popular="75">
+        <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?auto=format&fit=crop&w=600&q=80" alt="Godot Engine" class="site-preview">
+        <div class="site-body">
+          <div class="site-title">⚡ Godot Engine</div>
+          <div class="site-desc">Официальный сайт легкого и мощного open-source движка для 2D и 3D игр.</div>
+          <div class="site-meta">
+            <span class="site-tag">GDScript</span>
+            <a href="https://godotengine.org" target="_blank" class="btn-visit">Открыть ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 4 -->
+      <div class="site-card animate-cascade delay-6" data-category="web" data-name="MDN Web Docs" data-popular="95">
+        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="MDN Docs" class="site-preview">
+        <div class="site-body">
+          <div class="site-title">🌐 MDN Web Docs</div>
+          <div class="site-desc">Главный официальный справочник по HTML, CSS и JavaScript от Mozilla.</div>
+          <div class="site-meta">
+            <span class="site-tag">Web Standards</span>
+            <a href="https://developer.mozilla.org" target="_blank" class="btn-visit">Открыть ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 5 -->
+      <div class="site-card animate-cascade delay-7" data-category="game" data-name="Roblox Home" data-popular="100">
+        <img src="" alt="Roblox Home" class="site-preview">
+        <div class="site-body">
+          <div class="site-title">🎮 Roblox Home</div>
+          <div class="site-desc">Главный портал платформы Roblox для запуска игр и управление аккаунтом.</div>
+          <div class="site-meta">
+            <span class="site-tag">Roblox Home</span>
+            <a href="https://www.roblox.com/home" target="_blank" class="btn-visit">Открыть ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 6 -->
+      <div class="site-card animate-cascade delay-8" data-category="bench" data-name="FurMark" data-popular="70">
+        <img src="" alt="FurMark" class="site-preview">
+        <div class="site-body">
+          <div class="site-title">FurMark</div>
+          <div class="site-desc">Популярный стресс-тест («бублик») для проверки стабильности, перегрева и производительности видеокарты.</div>
+          <div class="site-meta">
+            <span class="site-tag">FurMark</span>
+            <a href="https://www.geeks3d.com/furmark/" target="_blank" class="btn-visit">Открыть ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+   <script src="scriptSite.js"></script>
+
 </body>
 </html>

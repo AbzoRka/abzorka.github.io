@@ -1,0 +1,205 @@
+/* Переменные для быстрой настройки */
+:root {
+  --bg-color: #0b0f19;
+  --card-bg: #111827;
+  --border-color: #1f2937;
+  --accent-color: #38bdf8;
+  --text-main: #f3f4f6;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Верхняя таблица-навигация и настройки */
+.top-nav-container {
+  background: #111827;
+  border-bottom: 2px solid var(--border-color);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.nav-table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.nav-table td {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border-color);
+  background: #1e293b;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.nav-table a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-table a:hover {
+  color: #818cf8;
+}
+
+.nav-table select, .nav-table input {
+  background: #0f172a;
+  color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+/* Основной контейнер */
+.main-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-header h1 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Сетка карточек сайтов в ряд */
+.sites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Стиль карточки сайта */
+.site-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
+}
+
+/* Картинка-превью сайта */
+.site-preview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background: #1e293b;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Контент карточки */
+.site-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.site-title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-desc {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.site-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.site-tag {
+  background: #1e293b;
+  color: #818cf8;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #312e81;
+}
+
+.btn-visit {
+  background: var(--accent-color);
+  color: #0b0f19;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn-visit:hover {
+  background: #7dd3fc;
+}
+
+/* плавное появление */
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-cascade {
+  animation: slideDown 0.8s ease-out both;
+}
+
+.delay-1 {animation-delay: 0.1s;}
+.delay-2 {animation-delay: 0.3s;}
+.delay-3 {animation-delay: 0.5s;}
+.delay-4 {animation-delay: 0.7s;}
+.delay-5 {animation-delay: 0.9s;}
+.delay-6 {animation-delay: 1.1s;}
+.delay-7 {animation-delay: 1.3s;}
+.delay-8 {animation-delay: 1.5s;}
