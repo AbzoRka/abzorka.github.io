@@ -2,67 +2,256 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="google-site-verification" content="osB6-51xykX8p5pw3NpB4TJdDRH3TSYYNqtA21yycYI" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AbzoRka - Официальный сайт</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <meta name="description" content="Личный сайт AbzoRka. Здесь вы найдете мои проекты, другие официальные сайты, мои коды и 3D модели">
+  <!-- Иконки FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Шрифт Inter для чистого вида -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Иконка сайта -->
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
-  <header id="about">
-    <img src="avatar.jpg" alt="Аватарка" class="avatar">
-
-    <div class="header-text">
-      <h1>Привет! Я Abzorka.</h1>
-      <p>Я начинающий веб-разработчик, программист и блогер. Здесь я рассказываю о себе и о своих проектах, а также тут я делюсь своими проектами и ни только!</p>
+  <!-- Навигация -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-code"></i> AbzoRka
     </div>
-
-    <div class="contacts-card">
-      <h3 class="card-title">🌐 Соцсети</h3>
-      <ul class="contacts-list">
-        <li><a href="https://www.youtube.com/@abzorka_gellori" target="_blank"><i class="fa-brands fa-youtube icon-yt"></i> YouTube</a></li>
-        <li><a href="https://t.me/Durka_AbzoRka_DC" target="_blank"><i class="fa-brands fa-telegram icon-tg"></i> Telegram</a></li>
-        <li><a href="https://discord.gg/rHU9wzR6" target="_blank"><i class="fa-brands fa-discord icon-ds"></i> Discord</a></li>
-      </ul>
+    <div class="nav-links">
+      <a href="#about"><i class="fa-regular fa-user"></i> Обо мне</a>
+      <a href="#projects"><i class="fa-regular fa-folder-open"></i> Проекты</a>
+      <a href="#skills"><i class="fa-solid fa-chart-simple"></i> Навыки</a>
+      <a href="https://github.com/AbzoRka" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="#contacts"><i class="fa-regular fa-envelope"></i> Контакты</a>
     </div>
-  </header>
-
-  <nav>
-    <a href="#about">Обо мне</a>
-    <a href="#projects">Проекты</a>
-    <a href="https://github.com/AbzoRka">Мой GitHub</a>
+    <div class="theme-toggle">
+      <i class="fa-regular fa-moon not-ready"></i>
+    </div>
   </nav>
 
-  <section id="projects">
-    <h2 class="section-title">Мои проекты и д.р.</h2>
-    <p class="section-subtitle">Тут в будущем появится список моих классных работ или навыков!</p>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="site.jpg" alt="Site">
-        <a href="site.html" class="project-link">Официальные Сайты</a>
+  <div class="main-container">
+
+    <!-- Шапка / Hero -->
+    <header class="hero-section">
+      <div class="hero-main">
+        <div class="avatar-wrapper">
+          <img src="avatar.jpg" alt="AbzoRka Avatar" class="avatar">
+        </div>
+        <div class="hero-info">
+          <h1>Привет! Я <span class="shimmer-text">AbzoRka</span>.</h1>
+          <p class="subtitle">Frontend-разработчик и веб-программист</p>
+          <p class="description">
+            Создаю современные сайты и веб-приложения.<br>
+            Люблю чистый код, интересные проекты и постоянное развитие.
+          </p>
+          
+          <div class="hero-buttons">
+          <div class="btn-neon-wrapper">
+              <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Смотреть проекты</a>
+          </div>
+            <a href="https://github.com/AbzoRka" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://t.me/abzorka" class="btn btn-outline"><i class="fa-regular fa-paper-plane"></i> Связаться</a>
+          </div>
+
+          <!-- Стек технологий -->
+          <div class="tech-stack">
+            <i class="fa-brands fa-html5" title="HTML5"></i>
+            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+            <i class="fa-brands fa-square-js" title="JavaScript"></i>
+          </div>
+        </div>
+        
+      <!-- Соцсети справа -->
+      <div class="socials-card">
+        <h3>Соцсети</h3>
+        <ul class="socials-list">
+          <li>
+            <a href="https://www.youtube.com/@abzorka_gellori" target="_blank">
+              <div class="icon-box yt"><i class="fa-brands fa-youtube"></i></div>
+              <div class="social-text">
+                <strong>YouTube</strong>
+                <span>Мои видео и туториалы</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/Durka_AbzoRka_DC" target="_blank">
+              <div class="icon-box tg"><i class="fa-brands fa-telegram"></i></div>
+              <div class="social-text">
+                <strong>Telegram</strong>
+                <span>Новости и общение</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/rHU9wzR6" target="_blank">
+              <div class="icon-box ds"><i class="fa-brands fa-discord"></i></div>
+              <div class="social-text">
+                <strong>Discord</strong>
+                <span>Мировой клан DC</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </header>
+
+    <!-- Секция проектов -->
+    <section id="projects" class="projects-section">
+      <div class="section-header">
+        <h2><i class="fa-desktop-screen"></i> Мои проекты</h2>
+        <a href="#" class="view-all">Смотреть все проекты <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
-      <div class="project-card">
-        <img src="code.jpg" alt="Коды">
-        <a href="code.html" class="project-link">Коды</a>
-      </div>
+      <div class="projects-grid">
+        <!-- Карточка 1 -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="site.jpg" alt="Официальные Сайты">
+          </div>
+          <div class="card-content">
+            <h3>Официальные Сайты</h3>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <p>Коллекция моих официальных сайтов и лендингов.</p>
+            <div class="card-buttons">
+              <a href="site.html" class="btn-card"><i class="fa-solid fa-arrow-up-right-from-square"></i> Открыть</a>
+              <a href="#" class="btn-card not-ready"><i class="fa-brands fa-github"></i> Код</a>
+            </div>
+          </div>
+        </div>
 
-      <div class="project-card">
-        <img src="3d.jpg" alt="3D">
-        <a href="" class="project-link">3D Модели</a>
-      </div>
-      
+      <div class="projects-grid">
+        <!-- Карточка 2 -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="minecraft.jpg" alt="Minecraft">
+            <i class="fa-solid fa-map fa-1x"></i>
+          </div>
+          <div class="card-content">
+            <h3>Постройки Minecraft</h3>
+            <div class="tags">
+              <span>Minecraft</span><span>Карты</span><span>Билдинг</span>
+            </div>
+            <p>Галерея моих архитектурных построек, масштабных кард и ирговых миров.</p>
+            <div class="card-buttons">
+              <a href="minecraft.html" class="btn-card not-ready"><i class="fa-solid fa-arrow-up-right-from-square"></i> Открыть</a>
+              <a href="#" class="btn-card not-ready"><i class="fa-brands fa-github"></i> Код</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+        <!-- Карточка 3 -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="3d.jpg" alt="3d">
+            <i class="fa-solid fa-cubes fa-1x"></i>
+          </div>
+          <div class="card-content">
+            <h3>3D модели</h3>
+            <div class="tags">
+              <span>3d</span><span>Карты</span><span>Билдинг</span>
+            </div>
+            <p>Галерея моих архитектурных построек, масштабных кард и ирговых миров.</p>
+            <div class="card-buttons">
+              <a href="minecraft.html" class="btn-card not-ready"><i class="fa-solid fa-arrow-up-right-from-square"></i> Открыть</a>
+              <a href="#" class="btn-card not-ready"><i class="fa-brands fa-github"></i> Код</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Нижний блок из трех колонок -->
+    <div class="bottom-grid">
+      <!-- Обо мне -->
+      <section id="about" class="info-card">
+        <h3><i class="fa-regular fa-user"></i> Обо мне</h3>
+        <p>Я начинающий веб-разработчик из России. Занимаюсь программированием и версткой. Постоянно изучаю новые технологии, создаю проекты и стремлюсь к росту.</p>
+
+        <!-- Контейнер с бейджами -->
+        <div class="badge-group">
+          <span class="badge"><i class="fa-solid fa-user-graduate"></i> Возраст: 18+</span>
+          <span class="badge"><i class="fa-solid fa-location-dot"></i> Россия</span>
+          <span class="badge"><i class="fa-solid fa-bullseye"></i> Фокус: Frontend</span>
+        </div>
+      </section>
+
+      <!-- Навыки -->
+      <section id="skills" class="info-card">
+        <h3><i class="fa-solid fa-chart-simple"></i> Навыки</h3>
+        <div class="skills-list">
+          <div class="skill-item">
+            <div class="skill-info"><span>HTML</span><span>100%</span></div>
+            <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>CSS</span><span>70%</span></div>
+            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>JavaScript</span><span>5%</span></div>
+            <div class="progress-bar"><div class="progress" style="width: 5%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Git</span><span>0%</span></div>
+            <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GitHub Статистика -->
+      <section class="info-card github-card">
+        <h3><i class="fa-brands fa-github"></i> GitHub статистика</h3>
+        <div class="gh-profile">
+          <img src="avatar.jpg" alt="AbzoRka">
+          <div>
+            <h4>AbzoRka</h4>
+            <span>@azborka</span>
+          </div>
+        </div>
+        <div class="gh-stats">
+          <div class="stat"><span class="num">1</span><span class="label">Репозитории</span></div>
+          <div class="stat"><span class="num">1</span><span class="label">Проекты</span></div>
+          <div class="stat"><span class="num">0</span><span class="label">Подписчики</span></div>
+          <div class="stat"><span class="num">0</span><span class="label">Подписки</span></div>
+        </div>
+        <a href="https://github.com/AbzoRka" target="_blank" class="btn btn-outline full-width">Перейти на GitHub <i class="fa-solid fa-arrow-right"></i></a>
+      </section>
     </div>
-  </section>
 
-    <!-- JS -->
-   <script src="scriptIndex.js"></script>
+  </div>
 
-   <footer>
-    <p>© 2026 Abzorka. Все права защищены. Создано с душой и кодом.</p>
-   </footer>
+  <!-- Футер -->
+  <footer id="contacts">
+    <div class="footer-content">
+      <p>© 2026 AbzoRka. Все права защищены.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/AbzoRka"><i class="fa-brands fa-github"></i></a>
+        <a href="https://t.me/Durka_AbzoRka_DC"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://www.youtube.com/@abzorka_gellori"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://discord.gg/rHU9wzR6"><i class="fa-brands fa-discord"></i></a>
+      </div>
+      <a href="#" class="back-to-top">Наверх <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-icon">⚠️</div>
+      <h3>Проект в разбработке</h3>
+      <p>Эта страница или ссылка пока не готова. Вернись чуть позже!</p>
+      <button id="close-modal-btn">Понял</button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
 </body>
 </html>
