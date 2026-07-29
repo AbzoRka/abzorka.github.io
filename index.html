@@ -36,9 +36,36 @@
     <!-- Шапка / Hero -->
     <header class="hero-section">
       <div class="hero-main">
-        <div class="avatar-wrapper">
-          <img src="avatar.jpg" alt="AbzoRka Avatar" class="avatar">
+        
+        <!-- Сама аватарка теперь и есть кнопка-триггер -->
+        <div id="easter-egg-btn" class="avatar-wrapper" style="cursor: pointer;">
+          <img src="avatar.jpg" alt="Моя аватарка" class="avatar">
         </div>
+
+        <!-- Модалка-предупреждение -->
+        <div id="warning-modal" class="modal hidden">
+          <div class="modal-content">
+            <h2>⚠️ ОСТОРОЖНО! ⚠️</h2>
+            <p>Сейчас будет **ОЧЕНЬ ГРОМКО**. Ты точно уверен?</p>
+            <div class="modal-actions">
+              <button id="confirm-btn">Да, врубай!</button>
+              <button id="cancel-btn">Не-не, я пасс</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Модалка с видео (Синий рак) -->
+        <div id="video-modal" class="modal hidden">
+          <div class="modal-content video-box">
+            <button id="close-video-btn" class="close-btn">&times;</button>
+            <video id="lobster-video" controls>
+              <source src="blue lobster.mp4" type="video/mp4">
+              Твой браузер не поддерживает видео.
+            </video>
+          </div>
+        </div>
+
+        <!-- Описание -->
         <div class="hero-info">
           <h1>Привет! Я <span class="shimmer-text">AbzoRka</span>.</h1>
           <p class="subtitle">Frontend-разработчик и веб-программист</p>
@@ -86,7 +113,7 @@
             </a>
           </li>
           <li>
-            <a href="https://discord.gg/rHU9wzR6" target="_blank">
+            <a href="https://discord.gg/2KVpqHst" target="_blank">
               <div class="icon-box ds"><i class="fa-brands fa-discord"></i></div>
               <div class="social-text">
                 <strong>Discord</strong>
@@ -227,18 +254,29 @@
   </div>
 
   <!-- Футер -->
-  <footer id="contacts">
-    <div class="footer-content">
-      <p>© 2026 AbzoRka. Все права защищены.</p>
-      <div class="footer-socials">
-        <a href="https://github.com/AbzoRka"><i class="fa-brands fa-github"></i></a>
-        <a href="https://t.me/Durka_AbzoRka_DC"><i class="fa-brands fa-telegram"></i></a>
-        <a href="https://www.youtube.com/@abzorka_gellori"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://discord.gg/rHU9wzR6"><i class="fa-brands fa-discord"></i></a>
-      </div>
-      <a href="#" class="back-to-top">Наверх <i class="fa-solid fa-arrow-up"></i></a>
+<footer id="contacts">
+  <div class="footer-content">
+    
+    <!-- Слева: Копирайт в две строки -->
+    <div class="footer-copy">
+      <span>© 2026 AbzoRka.</span>
+      <span>Все права защищены.</span>
     </div>
-  </footer>
+
+    <!-- В центре: Твои соцсети -->
+    <div class="footer-socials">
+      <a href="https://github.com/AbzoRka" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://t.me/Durka_AbzoRka_DC" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+      <a href="https://www.youtube.com/@abzorka_gellori" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://discord.gg/2KVpqHst" target="_blank"><i class="fa-brands fa-discord"></i></a>
+    </div>
+
+    <!-- Справа: Кнопка Наверх -->
+    <a href="#" class="back-to-top">Наверх <i class="fa-solid fa-arrow-up"></i></a>
+
+  </div>
+</footer>
+
 
   <!-- Модальное окно -->
   <div id="modal-overlay" class="modal-overlay">

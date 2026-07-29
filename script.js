@@ -40,3 +40,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+const eggBtn = document.getElementById('easter-egg-btn');
+const warningModal = document.getElementById('warning-modal');
+const videoModal = document.getElementById('video-modal');
+const confirmBtn = document.getElementById('confirm-btn');
+const cancelBtn = document.getElementById('cancel-btn');
+const closeVideoBtn = document.getElementById('close-video-btn');
+const lobsterVideo = document.getElementById('lobster-video');
+
+// 1. Клик по АВАТАРКЕ — показываем предупреждение
+eggBtn.addEventListener('click', () => {
+  warningModal.classList.remove('hidden');
+});
+
+// 2. Отмена — закрываем табличку
+cancelBtn.addEventListener('click', () => {
+  warningModal.classList.add('hidden');
+});
+
+// 3. Подтверждение — открываем видео и пускаем звук
+confirmBtn.addEventListener('click', () => {
+  warningModal.classList.add('hidden');
+  videoModal.classList.remove('hidden');
+  
+  lobsterVideo.currentTime = 0;
+  lobsterVideo.play();
+});
+
+// 4. Закрытие видео
+closeVideoBtn.addEventListener('click', () => {
+  lobsterVideo.pause();
+  videoModal.classList.add('hidden');
+});
