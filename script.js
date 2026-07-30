@@ -73,3 +73,32 @@ closeVideoBtn.addEventListener('click', () => {
   lobsterVideo.pause();
   videoModal.classList.add('hidden');
 });
+
+// Находим ВСЕ ссылки в навигации, которые ведут к блокам через #
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    
+    if (targetId === '#' || !targetId) return;
+    
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      e.preventDefault();
+
+      // 1. Плавный скролл до центра экрана
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+
+      // 2. Запускаем подсветку
+      targetElement.classList.add('highlight-target');
+
+      // 3. Снимаем класс через 2.5 секунды
+      setTimeout(() => {
+        targetElement.classList.remove('highlight-target');
+      }, 2500);
+    }
+  });
+});
